@@ -2,8 +2,7 @@ The *XML Driven Logon Script* is an VBScript based logon script which behaviour 
 
 Here is a rundown of the main features of the XML Driven Logon Script:
 
-- **Separation of code and rules**. The script file (Logon.vbs) contains all the functions and objects that performs the actions defined in an xml file (logonrules.xml). Unless a new feature is needed, a change to the behaviour of the logon script is done completely in the xml file.
-- **Control behaviour of the logon script by defining filters and actions in xml file(s)**. Build action sets that are selected based on one or more filter, filter by Active Directory security groups, usernames, computer names and more. Actions include ability to map network drives, add network printers, copy files and more. See the documentation for more details on available filters and actions.
-- **Logging direct to the executing computers Event Log**. All information gathered by the script and all executed actions are logged to an entry in the Event Log on the computer running the script, making it easy to debug and find errors.
-- **Friendly Internet Explorer window used to display messages to users**. Among other things, the logon script will display a friendly message about each action performed during execution and tell the user how long until his or hers password expire.
-
+- *Separation of code and rules*. The script file (Logon.vbs) contains all the functions and objects that performs the actions defined in an xml file (logonrules.xml). Unless a new feature is needed, a change to the behaviour of the logon script is done completely in the xml file.
+- *Control behaviour of the logon script by defining filters and actions in xml file(s)*. Build action sets that are selected based on one or more filter, filter by Active Directory security groups, usernames, computer names and more. Actions include ability to map network drives, add network printers, copy files and more. See the documentation for more details on available filters and actions.
+- *Logging direct to the executing computers Event Log*. All information gathered by the script and all executed actions are logged to an entry in the Event Log on the computer running the script, making it easy to debug and find errors.
+- *Friendly Internet Explorer window used to display messages to users*. Among other things, the logon script will display a friendly message about each action performed during execution and tell the user how long until his or hers password expire.
