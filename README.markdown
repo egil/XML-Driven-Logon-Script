@@ -6,3 +6,5 @@ Here is a rundown of the main features of the XML Driven Logon Script:
 - *Control behaviour of the logon script by defining filters and actions in xml file(s)*. Build action sets that are selected based on one or more filter, filter by Active Directory security groups, usernames, computer names and more. Actions include ability to map network drives, add network printers, copy files and more. See the documentation for more details on available filters and actions.
 - *Logging direct to the executing computers Event Log*. All information gathered by the script and all executed actions are logged to an entry in the Event Log on the computer running the script, making it easy to debug and find errors.
 - *Friendly Internet Explorer window used to display messages to users*. Among other things, the logon script will display a friendly message about each action performed during execution and tell the user how long until his or hers password expire.
+
+Take a look at the [documentation section](https://github.com/egil/XML-Driven-Logon-Script/wiki) for a more in-depth examination of the features and configuration options in the script.
