@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<!DOCTYPE logonRules [
+  <!ELEMENT logonRules (actionSet*)>
+  <!ELEMENT actionSet (filterSet?,actions?)>
+  <!ELEMENT filterSet (filter|boolFilter)*>
+  <!ELEMENT actions (addPrinter|copyFile|executeInBackground|executeAndWait|mapDrive|setDefaultPrinter)*>
+  <!ELEMENT filter EMPTY>
+  <!ATTLIST filter condition (and|or|not) "and">
+  <!ATTLIST filter type (group|user|computer|domaincontroller|site) #REQUIRED> 
+  <!ATTLIST filter name CDATA #REQUIRED>
+  <!ELEMENT boolFilter EMPTY>
+  <!ATTLIST boolFilter condition (and|or|not) "and">
+  <!ATTLIST boolFilter type (isICASession|isRDPSession|isServer) #REQUIRED>  
+  <!ELEMENT addPrinter EMPTY>
+  <!ATTLIST addPrinter unc CDATA #REQUIRED>
+  <!ELEMENT copyFile EMPTY>
+  <!ATTLIST copyFile source CDATA #REQUIRED>
+  <!ATTLIST copyFile destination CDATA #REQUIRED>
+  <!ATTLIST copyFile option (ifDifferent|onlyIfNotExists|alwaysCopy) "ifDifferent">
+  <!ELEMENT executeInBackground EMPTY>
+  <!ATTLIST executeInBackground executable CDATA #REQUIRED>
+  <!ELEMENT executeAndWait EMPTY>
+  <!ATTLIST executeAndWait executable CDATA #REQUIRED>
+  <!ELEMENT mapDrive EMPTY>
+  <!ATTLIST mapDrive drive CDATA #REQUIRED>
+  <!ATTLIST mapDrive unc CDATA #REQUIRED>
+  <!ATTLIST mapDrive persistent (true|false) "false">
+  <!ELEMENT setDefaultPrinter EMPTY>
+  <!ATTLIST setDefaultPrinter unc CDATA #REQUIRED>
+  <!--
+    Add static wildcards here.
+    
+    Declare a new wildcard
+      Syntax: <!ENTITY wildcard "value">
+      Example: <!ENTITY fs1 "fs1">
+  
+    Use a new wildcard
+      Syntax: &wildcard;
+      Example: <mapDrive drive="z" unc="&fs1;\share"/>
+  -->  
+  <!ENTITY fs1 "fileserver1">
+]>
+<!--
+  Build in wildcards
+  
+  You can use the following wildecards in the script (add % before and after).
+  These translate like to their OS environment variable counterparts.
+  
+  %Computername%
+  %Username%
+  %Domain%
+  %LogonServer%
+  %AllUsersDesktop%
+  %AllUsersStartMenu%
+  %AllUsersPrograms%
+  %AllUsersStartup%
+  %Desktop%
+  %Favorites%
+  %Fonts%
+  %MyDocuments%
+  %NetHood%
+  %PrintHood%
+  %Programs%
+  %Recent%
+  %SendTo%
+  %StartMenu%
+  %Startup%
+  %SystemDrive%
+  %SystemRoot%
+  %Templates%      
+-->
+<logonRules>
+
+  <actionSet>
+    <filterSet>
+      <!-- filters go here -->
+    </filterSet>
+    <actions>
+      <!-- actions go here -->
+    </actions>
+  </actionSet>
+
+  <actionSet>
+    <filterSet>
+      <!-- filters go here -->
+    </filterSet>
+    <actions>
+      <!-- actions go here -->
+    </actions>
+  </actionSet>
+
+</logonRules>
